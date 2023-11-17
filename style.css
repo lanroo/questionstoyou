@@ -4,7 +4,7 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 .centralizado {
@@ -149,7 +149,7 @@ respostaInput {
 button#proximoBtn {
     width: 300px;
     margin-left: 312px;
-    margin-top: 162px;
+    margin-top: 109px;
 }
 
 

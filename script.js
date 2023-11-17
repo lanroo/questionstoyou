@@ -4,10 +4,10 @@ document.getElementById('verificarBtn').addEventListener('click', function() {
     let feedback = '';
 
     // Verifica se a resposta é uma das variações válidas
-    if (resposta === 'vem ca sobrinho' || resposta === 'vou la tio') {
-        feedback = 'Parabéns, que boa memória você tem hein!';
+    if (resposta === 'vem ca sobrinho' || resposta === 'vem cá sobrinho') {
+        feedback = 'Parabéns, que boa memória você tem hein! 😊';
     } else {
-        feedback = 'Errou, a memória falhou foi? Resposta: Vem cá, sobrinho!';
+        feedback = '❌ Errou, a memória falhou foi? A Resposta é: Vem cá, sobrinho!';
     }
 
     document.getElementById('feedback').textContent = feedback;

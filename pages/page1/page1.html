@@ -8,16 +8,23 @@
     <link rel="stylesheet" href="page1.css">
 </head>
 <body>
-      
-    <div id="container-page1">
-        <h1 id="pergunta-page1">Por que o esqueleto não brigou com ninguém?</h1>
-        <input type="text" id="respostaInput" placeholder="Digite sua resposta aqui">
-        <button id="verificarBtn">Verificar</button>
-        <p id="feedback"></p>
-        <button id="proximoBtn" style="display:none;">Próxima Página</button>
+    <div class="video-background">
+        <video autoplay loop muted>
+            <source src="./assets/espaco.mp4" type="video/mp4">
+            Seu navegador não suporta vídeos em HTML5.
+        </video>
+        <div class="content">  
+            <div id="container-page1">
+                <h1 id="pergunta-page1">Por que o esqueleto não brigou com ninguém?</h1>
+                <input type="text" id="respostaInput" placeholder="Digite sua resposta aqui">
+                <button id="verificarBtn">Verificar</button>
+                <p id="feedback"></p>
+                <button id="proximoBtn" style="display:none;">Próxima Página</button>
+            </div>
+        </div>
     </div>
     <script>
-        document.getElementById('proximoBtn').addEventListener('click', function() {
+        document.getElementById('proxBtn').addEventListener('click', function() {
           // Redirecionar para a página "page2"
           window.location.href = '';
         });
