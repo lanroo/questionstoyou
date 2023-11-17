@@ -5,36 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seu Título</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="page1.css">
 </head>
 <body>
-    <div class="centralizado"></div>
-    <div id="conjunto-total">
-        <div class="container">
-            <h3>Vamos brincar de adivinhar?</h3><br>
-            <div class="buttons">
-                <button id="simBtn" class="button">Sim</button>
-                <button id="naoBtn" class="button">Não</button>
-            </div>
-        </div>
-    </div>
-    
-    <div id="conjunto-total2">
-        <h1 id="pergunta">Você sabe qual é o contrário de volátil?</h1>
+      
+    <div id="container-page1">
+        <h1 id="pergunta-page1">Por que o esqueleto não brigou com ninguém?</h1>
         <input type="text" id="respostaInput" placeholder="Digite sua resposta aqui">
         <button id="verificarBtn">Verificar</button>
         <p id="feedback"></p>
         <button id="proximoBtn" style="display:none;">Próxima Página</button>
     </div>
     <script>
-        // Adicione um manipulador de eventos ao botão
         document.getElementById('proximoBtn').addEventListener('click', function() {
-          // Redirecionar para a página "page1.html"
-          window.location.href = '../pages/page1/page1.html';
+          // Redirecionar para a página "page2"
+          window.location.href = '';
         });
       </script>
 
-    <script src="script.js"></script>
+    <script src="page1.js"></script>
 </body>
 
 <footer>
