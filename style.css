@@ -1,0 +1,221 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+}
+
+.centralizado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh; 
+    margin-left: 134px;
+  }
+  
+/*div#conjunto-total2 {
+    margin-left: 128px;
+}*/
+#conjunto-total2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* margin-left: -137px; Remova esta linha */
+    margin-top: 207px;
+}
+
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 4rem;
+    color: #4a90e2;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 4.5rem;
+    margin-bottom: 25px;
+    background: linear-gradient(to right, #ADD8E6, #007BFF, #00008B, #DABFFF, #9370DB, #5B388F, #FFB6C1, #FF69B4, #C71585, #98FB98, #32CD32, #006400);
+    background-size: 200% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    animation: mudancaDeCor 5s linear infinite;
+    
+}
+
+p#feedback {
+    color: red;
+    margin-left: 126px;
+    font-size: 2rem;
+}
+
+input {
+    padding: 30px;
+    margin: 10px;
+    border-radius: 30px;
+    width: 80%;
+    font-size: 1.5rem;
+    background: transparent;
+    box-shadow: 0 0 0 4px #ADD8E6 inset, 0 0 0 12px #00008B inset;
+    animation: mudancaDeCorBorda 5s linear infinite;
+}
+
+/*button {
+    cursor: pointer;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    padding: 15px;
+    margin: 75px;
+    border-radius: 30px;
+    width: 42%;
+    font-size: 1.8rem;
+    margin-left: 193px;
+    transition: background-color 0.3s, transform 0.2s; 
+    transform: scale(1.1); 
+ 
+}*/
+
+button {
+    cursor: pointer;
+    background-color: #1560ac;
+    color: white;
+    border: none;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 30px;
+    font-size: 2rem;
+    width: 25%;
+    margin-left: 312px;
+   
+}
+
+button:hover {
+    background-color: #000000; 
+    transform: scale(1.1); 
+    transition: background-color 0.3s, transform 0.2s; 
+}
+
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+#simBtn,
+#naoBtn {
+    cursor: pointer;
+    background-color: #b3355f;
+    color: white;
+    border: none;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 30px;
+    font-size: 2rem;
+    transition: background-color 0.3s, transform 0.2s; 
+    width: 25%;
+}
+
+
+#simBtn:hover,
+#naoBtn:hover {
+    background-color: #a82d52; 
+    transform: scale(1.1); 
+}
+
+
+
+#simBtn:hover,
+#naoBtn:hover {
+    background-color: #010203;
+}
+
+respostaInput {
+    width: 100%;
+}
+
+button#proximoBtn {
+    width: 300px;
+    margin-left: 312px;
+    margin-top: 162px;
+}
+
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #333; 
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+
+@keyframes mudancaDeCorBorda {
+    0%, 80% {
+        box-shadow: 0 0 0 4px #ADD8E6 inset, 0 0 0 8px #007BFF inset, 0 0 0 12px #00008B inset;
+    }
+    50% {
+        box-shadow: 0 0 0 12px #007BFF inset;
+    }
+}
+
+@keyframes arcoIris {
+    0% { border-color: red; }
+    14% { border-color: orange; }
+    28% { border-color: yellow; }
+    42% { border-color: green; }
+    57% { border-color: blue; }
+    71% { border-color: indigo; }
+    85% { border-color: violet; }
+    100% { border-color: red; }
+}
+
+@keyframes mudancaDeCor {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem; 
+        margin-left: -37px;
+        text-align: center;
+    }
+  
+    h3 {
+        font-size: xxx-large;
+    }
+
+    input {
+        font-size: 1rem;
+    }
+
+    button {
+        font-size: 0.8rem;
+        margin-left: 105px;
+    }
+   
+    @media (min-width: 500px) {
+        #conjunto-total2 {
+            width: 100%; 
+            max-width: 800px; 
+        }
+     
+    }
+
+
