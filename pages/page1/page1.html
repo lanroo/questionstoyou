@@ -19,16 +19,20 @@
                 <input type="text" id="respostaInput" placeholder="Digite sua resposta aqui">
                 <button id="verificarBtn">Verificar</button>
                 <p id="feedback"></p>
-                <button id="proximoBtn" style="display:none;">Próxima Página</button>
+
+                <button id="proxBtn" style="display:none;">Próxima Página</button>
             </div>
         </div>
     </div>
+    
     <script>
-        document.getElementById('proxBtn').addEventListener('click', function() {
-          // Redirecionar para a página "page2"
-          window.location.href = '';
-        });
-      </script>
+    document.getElementById('proxBtn').addEventListener('click', function() {
+        // Redirecionar para a página "page2"
+    window.location.href = '../page2/page2.html';
+
+    });
+
+    </script>
 
     <script src="page1.js"></script>
 </body>

@@ -1,0 +1,145 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+#container-page2 {
+    text-align: center;
+}
+
+h1#pergunta-page2 {
+    padding-bottom: 47px;
+    font-size: 3em;
+    color: #67bfdf;
+}
+
+p#feedback {
+    color: rgb(248, 248, 248);
+    margin-left: 126px;
+    font-size: 2rem;
+}
+
+button#nextBtn2 {
+    margin-left: 21rem;
+    margin-top: 5rem;
+    width: 296px;
+}
+
+input {
+    padding: 30px;
+    margin: 10px;
+    border-radius: 30px;
+    width: 80%;
+    font-size: 1.5rem;
+    background: transparent;
+    box-shadow: 0 0 0 4px #3ea9d1 inset, 0 0 0 12px #f8f8f8 inset;
+    animation: mudancaDeCorBorda 5s linear infinite;
+}
+
+input#respostaInput {
+    color: white;
+}
+button {
+    cursor: pointer;
+    background-color: #3ea9d1;
+    font-family: 'Poppins', sans-serif;
+    color: rgb(7, 7, 7);
+    border: none;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 30px;
+    font-size: 2rem;
+    width: 25%;
+}
+
+button:hover {
+    background-color: rgb(21, 77, 173); 
+    transform: scale(1.1); 
+    transition: background-color 0.3s, transform 0.2s; 
+    color:white;
+    font-family: 'Poppins', sans-serif;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #333; 
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+
+
+@keyframes mudancaDeCorBorda {
+    0%, 80% {
+        box-shadow: 0 0 0 4px #ADD8E6 inset, 0 0 0 8px #3ea9d1 inset, 0 0 0 12px #09a5d5 inset;
+    }
+    50% {
+        box-shadow: 0 0 0 12px rgb(43, 198, 226)inset;
+    }
+}
+
+@media (max-width: 600px) {
+    
+    h3 {
+        font-size: xxx-large;
+    }
+
+    input {
+        font-size: 1rem;
+    }
+
+  
+    @media (min-width: 500px) {
+        #conjunto-total2 {
+            width: 100%; 
+            max-width: 800px; 
+        }
+     
+    }
+
+}
+
+body {
+    background: #000;
+    overflow: hidden;
+}
+
+.video-background {
+    position: 100%;
+    overflow: hidden;
+}
+
+.video-background video {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 39%;
+    left: 41%;
+    transform: translate(-43%, -36%);
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+    
+}
+
+@keyframes moverUniverso {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}

@@ -3,19 +3,19 @@ document.getElementById('verificarBtn').addEventListener('click', function() {
     const resposta = document.getElementById('respostaInput').value.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
     let feedback = '';
 
-    // Verifica se a resposta é uma das variações válidas
-    if (resposta === 'Porque ele não tem estômago para isso' || resposta === 'pq ele não tem estomago') {
+    const regex = /porque tinha muitos problemas de solu[cç][aã]o/i;
+
+    if (regex.test(resposta)) {
         feedback = 'Parabéns, ta afiada! 😊';
     } else {
-        feedback = '❌ Errou, a resposta correta é:<br>Porque ele não tem estômago para isso! 🦴';
+        feedback = '❌ Errou, a resposta correta é:<br>Porque tinha muitos problemas de solução!';
     }
 
     document.getElementById('feedback').innerHTML = feedback;
-    document.getElementById('proxBtn').style.display = 'block';
+    document.getElementById('nextBtn').style.display = 'block';
 });
 
-
-document.getElementById('proxBtn').addEventListener('click', function() {
+document.getElementById('nextBtn').addEventListener('click', function() {
     // Proximas perguntas
 });
 
