@@ -15,9 +15,7 @@ body, html {
     margin-left: 134px;
   }
   
-/*div#conjunto-total2 {
-    margin-left: 128px;
-}*/
+
 #conjunto-total2 {
     display: flex;
     justify-content: center;
@@ -70,21 +68,6 @@ input {
     animation: mudancaDeCorBorda 5s linear infinite;
 }
 
-/*button {
-    cursor: pointer;
-    background-color: #4a90e2;
-    color: white;
-    border: none;
-    padding: 15px;
-    margin: 75px;
-    border-radius: 30px;
-    width: 42%;
-    font-size: 1.8rem;
-    margin-left: 193px;
-    transition: background-color 0.3s, transform 0.2s; 
-    transform: scale(1.1); 
- 
-}*/
 
 button {
     cursor: pointer;
@@ -127,14 +110,6 @@ button:hover {
     transition: background-color 0.3s, transform 0.2s; 
     width: 25%;
 }
-
-
-#simBtn:hover,
-#naoBtn:hover {
-    background-color: #a82d52; 
-    transform: scale(1.1); 
-}
-
 
 
 #simBtn:hover,
@@ -189,34 +164,35 @@ footer {
     0%, 100% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
 }
-
 @media (max-width: 600px) {
     h1 {
-        font-size: 2rem; 
-        margin-left: -37px;
+        font-size: 2rem;
+        margin-left: 0;
         text-align: center;
     }
-  
+
     h3 {
-        font-size: xxx-large;
+        font-size: 2rem;
+        margin-right: 1px;
     }
 
     input {
         font-size: 1rem;
+        padding: 10px; 
+        margin: 0;
     }
 
     button {
         font-size: 0.8rem;
-        margin-left: 105px;
-    }
-   
-    @media (min-width: 500px) {
-        #conjunto-total2 {
-            width: 100%; 
-            max-width: 800px; 
-        }
-     
+        margin: 0 auto; 
+        width: 60%; 
     }
 
+    .centralizado, #conjunto-total2 {
+        margin-left: 0; 
+    }
 
+    .buttons {
+        flex-direction: inherit;
+    }
 }

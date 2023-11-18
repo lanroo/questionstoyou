@@ -24,9 +24,10 @@ p#feedback {
 }
 
 button#nextBtn2 {
-    margin-left: 21rem;
-    margin-top: 5rem;
+    margin-left: 10rem;
     width: 296px;
+    font-size: 1.5rem;
+    margin-top: 3rem;
 }
 
 input {
@@ -86,15 +87,6 @@ footer {
     }
 }
 
-@media (max-width: 600px) {
-    
-    h3 {
-        font-size: xxx-large;
-    }
-
-    input {
-        font-size: 1rem;
-    }
 
   
     @media (min-width: 500px) {
@@ -105,7 +97,19 @@ footer {
      
     }
 
-}
+    /* h3 {
+        font-size: xxx-large;
+    }
+
+    input {
+        font-size: 1rem;
+    }
+
+    button#verificarBtn {
+        width: 11rem;
+        margin-left: 4rem;
+        font-size: 1.5rem;
+    } */
 
 body {
     background: #000;
@@ -113,21 +117,26 @@ body {
 }
 
 .video-background {
-    position: 100%;
+    position: relative;
     overflow: hidden;
+    width: 99%;
+    height: 98vh;
+    padding-left: 19rem;
+    padding-right: 22rem;
 }
 
 .video-background video {
-    width: 100%;
-    height: auto;
     position: absolute;
-    top: 39%;
-    left: 41%;
-    transform: translate(-43%, -36%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     min-width: 100%;
     min-height: 100%;
+    width: auto;
+    height: auto;
     z-index: -1;
 }
+
 
 .content {
     position: relative;
@@ -135,11 +144,60 @@ body {
     
 }
 
-@keyframes moverUniverso {
-    0% {
-        transform: translateY(0);
+    
+    @media (max-width: 600px) {
+        .video-background {
+            padding-left: 1rem; /* Reduz o padding */
+            padding-right: 1rem;
+            width: 100%;
+            height: 100vh;
+        }
+    
+    
+        input {
+            font-size: 1rem;
+            padding: 17px;
+            width: 93%;
+            margin-left: -4px;
+        }
+        
+        
+    
+        h1#pergunta-page2 {
+            font-size: 2em;
+            margin-top: 64px;
+        }
+    
+        p#feedback {
+            margin-left: 0; /* Ajusta o alinhamento */
+            font-size: 1rem;
+        }
+    
+        button#nextBtn2 {
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+            font-size: 1rem;
+            margin-top: 4rem;
+        }
+
+        button#verificarBtn {
+            width: 11rem;
+            font-size: 1.5rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        
+        
     }
-    100% {
-        transform: translateY(-100%);
+
+    @keyframes moverUniverso {
+        0% {
+            transform: translateY(0);
+        }
+        100% {
+            transform: translateY(-100%);
+        }
     }
-}
+  
