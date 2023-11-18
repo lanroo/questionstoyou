@@ -1,0 +1,181 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+#container-page1 {
+    text-align: center;
+}
+
+h1#pergunta-page1 {
+    padding-bottom: 47px;
+    font-size: 3em;
+    color: #e2ab2b;
+}
+
+p#feedback {
+    color: rgb(248, 248, 248);
+    margin-left: 126px;
+    font-size: 2rem;
+}
+
+button#proximoBtn {
+    margin-left: 31rem;
+    margin-top: 5rem;
+    width: 296px;
+}
+
+input {
+    padding: 30px;
+    margin: 10px;
+    border-radius: 30px;
+    width: 80%;
+    font-size: 1.5rem;
+    background: transparent;
+    box-shadow: 0 0 0 4px #ADD8E6 inset, 0 0 0 12px #f8f8f8 inset;
+    animation: mudancaDeCorBorda 5s linear infinite;
+}
+
+input#respostaInput {
+    color: white;
+}
+button {
+    cursor: pointer;
+    background-color: #e2ab2b;
+    font-family: 'Poppins', sans-serif;
+    color: rgb(7, 7, 7);
+    border: none;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 30px;
+    font-size: 2rem;
+    width: 25%;
+}
+
+button:hover {
+    background-color: #ea0000; 
+    transform: scale(1.1); 
+    transition: background-color 0.3s, transform 0.2s; 
+    color:white;
+    font-family: 'Poppins', sans-serif;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #333; 
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+
+
+@keyframes mudancaDeCorBorda {
+    0%, 80% {
+        box-shadow: 0 0 0 4px #ADD8E6 inset, 0 0 0 8px #e2ab2b inset, 0 0 0 12px #d0ee83 inset;
+    }
+    50% {
+        box-shadow: 0 0 0 12px #e2ab2b inset;
+    }
+}
+
+@keyframes arcoIris {
+    0% { border-color: red; }
+    14% { border-color: orange; }
+    28% { border-color: yellow; }
+    42% { border-color: green; }
+    57% { border-color: blue; }
+    71% { border-color: indigo; }
+    85% { border-color: violet; }
+    100% { border-color: red; }
+}
+
+@keyframes mudancaDeCor {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem; 
+        margin-left: -37px;
+        text-align: center;
+    }
+  
+    h3 {
+        font-size: xxx-large;
+    }
+
+    input {
+        font-size: 1rem;
+    }
+
+    button {
+        font-size: 0.8rem;
+        margin-left: 105px;
+    }
+   
+    @media (min-width: 500px) {
+        #conjunto-total2 {
+            width: 100%; 
+            max-width: 800px; 
+        }
+     
+    }
+
+
+}
+body {
+    background: #000;
+    overflow: hidden;
+}
+
+/* #universo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('./assets/espaco.mp4');
+    /*animation: moverUniverso 20s linear infinite;
+}*/
+.video-background {
+    position: 100%;
+    overflow: hidden;
+}
+
+.video-background video {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+    /* Estilos adicionais para o conteúdo aqui */
+}
+
+
+
+@keyframes moverUniverso {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}

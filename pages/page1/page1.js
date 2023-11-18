@@ -1,36 +1,37 @@
-
 document.getElementById('verificarBtn').addEventListener('click', function() {
-    const resposta = document.getElementById('respostaInput').value.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    const respostaOriginal = document.getElementById('respostaInput').value;
+    const resposta = respostaOriginal.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
     let feedback = '';
 
-    // Verifica se a resposta é uma das variações válidas
-    if (resposta === 'Porque ele não tem estômago para isso' || resposta === 'pq ele não tem estomago') {
+    // Variações de perguntas
+    const regex = /pq ele n[aõ]o tem estomago (pra isso)?|porque ele n[aõ]o tem estomago (para isso)?/i;
+
+   
+    if (regex.test(resposta)) {
         feedback = 'Parabéns, ta afiada! 😊';
     } else {
-        feedback = '❌ Errou, a resposta correta é:<br>Porque ele não tem estômago para isso! 🦴';
+        feedback = '❌ Errou, a resposta correta é: "Porque ele não tem estômago para isso!" 🦴';
     }
 
     document.getElementById('feedback').innerHTML = feedback;
     document.getElementById('proxBtn').style.display = 'block';
 });
 
-
 document.getElementById('proxBtn').addEventListener('click', function() {
-    // Proximas perguntas
+    // outras perguntas
 });
 
- // Função para ocultar o conjunto-total2
+
+
  function ocultarConjuntoTotal2() {
     const conjuntoTotal2 = document.getElementById("conjunto-total2");
     conjuntoTotal2.style.display = "none";
 }
 
-// Função para mostrar o conjunto-total2
 function mostrarConjuntoTotal2() {
     const conjuntoTotal2 = document.getElementById("conjunto-total2");
     conjuntoTotal2.style.display = "block";
 
-    // Oculta o conjunto-total após mostrar o conjunto-total2
     const conjuntoTotal = document.getElementById("conjunto-total");
     conjuntoTotal.style.display = "none";
 }

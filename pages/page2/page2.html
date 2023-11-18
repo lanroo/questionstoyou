@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seu Título</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="page1.css">
+</head>
+<body>
+    <div class="video-background">
+        <video autoplay loop muted>
+            <source src="./assets/espaco.mp4" type="video/mp4">
+            Seu navegador não suporta vídeos em HTML5.
+        </video>
+        <div class="content">  
+            <div id="container-page1">
+                <h1 id="pergunta-page1">Por que o esqueleto não brigou com ninguém?</h1>
+                <input type="text" id="respostaInput" placeholder="Digite sua resposta aqui">
+                <button id="verificarBtn">Verificar</button>
+                <p id="feedback"></p>
+                <button id="proximoBtn" style="display:none;">Próxima Página</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('proxBtn').addEventListener('click', function() {
+          // Redirecionar para a página "page2"
+          window.location.href = '';
+        });
+      </script>
+
+    <script src="page1.js"></script>
+</body>
+
+<footer>
+<p>Desenvolvido por @LannaRoosevelt</p>
+</footer>
+</html>

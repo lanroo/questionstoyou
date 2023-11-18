@@ -1,18 +1,23 @@
 
 document.getElementById('verificarBtn').addEventListener('click', function() {
-    const resposta = document.getElementById('respostaInput').value.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    const respostaOriginal = document.getElementById('respostaInput').value;
+    const resposta = respostaOriginal.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
     let feedback = '';
 
-    // Verifica se a resposta é uma das variações válidas
-    if (resposta === 'vem ca sobrinho' || resposta === 'vem cá sobrinho') {
+    // Expressão regular para verificar as variações da resposta
+    const regex = /vem\s*ca,?\s*sobrinho/i;
+
+    // Verifica se a resposta corresponde a alguma das variações válidas
+    if (regex.test(resposta)) {
         feedback = 'Parabéns, que boa memória você tem hein! 😊';
     } else {
-        feedback = '❌ Errou, a memória falhou foi? A Resposta é: Vem cá, sobrinho!';
+        feedback = '❌ Errou, a memória falhou foi? A Resposta correta é: "Vem cá, sobrinho!"';
     }
 
     document.getElementById('feedback').textContent = feedback;
     document.getElementById('proximoBtn').style.display = 'block';
 });
+
 
 document.getElementById('proximoBtn').addEventListener('click', function() {
     // Proximas perguntas
