@@ -45,3 +45,4 @@ function mostrarConjuntoTotal2() {
 window.onload = ocultarConjuntoTotal2;
 const simBtn = document.getElementById("simBtn");
 simBtn.addEventListener("click", mostrarConjuntoTotal2);
+
