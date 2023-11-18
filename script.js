@@ -1,23 +1,29 @@
 
-document.getElementById('verificarBtn').addEventListener('click', function() {
-    const respostaOriginal = document.getElementById('respostaInput').value;
-    const resposta = respostaOriginal.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-    let feedback = '';
+    function verificarResposta() {
+        const respostaOriginal = document.getElementById('respostaInput').value;
+        const resposta = respostaOriginal.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+        let feedback = '';
 
-    // Expressão regular para verificar as variações da resposta
-    const regex = /vem\s*ca,?\s*sobrinho/i;
+        const regex = /vem\s*ca,?\s*sobrinho/i;
 
-    // Verifica se a resposta corresponde a alguma das variações válidas
-    if (regex.test(resposta)) {
-        feedback = 'Parabéns, que boa memória você tem hein! 😊';
-    } else {
-        feedback = '❌ Errou, a memória falhou foi? A Resposta correta é: "Vem cá, sobrinho!"';
+        if (regex.test(resposta)) {
+            feedback = 'Parabéns, que boa memória você tem hein! 😊';
+        } else {
+            feedback = '❌ Errou, a memória falhou foi? A Resposta correta é: "Vem cá, sobrinho!"';
+        }
+
+        document.getElementById('feedback').textContent = feedback;
+        document.getElementById('proximoBtn').style.display = 'block';
     }
 
-    document.getElementById('feedback').textContent = feedback;
-    document.getElementById('proximoBtn').style.display = 'block';
-});
+document.getElementById('verificarBtn').addEventListener('click', verificarResposta);
 
+// Event listener para a tecla Enter
+document.getElementById('respostaInput').addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+        verificarResposta();
+    }
+});
 
 document.getElementById('proximoBtn').addEventListener('click', function() {
     // Proximas perguntas
@@ -25,24 +31,23 @@ document.getElementById('proximoBtn').addEventListener('click', function() {
 
 
 // cursor style
-function criarEstrela(e) {
-    if (Math.random() > 0.21) { // Ajuste para controlar a frequência das estrelas
-        const estrela = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-        estrela.setAttribute('width', '40'); // Aumente o tamanho horizontal
-        estrela.setAttribute('height', '40'); // Aumente o tamanho vertical
-        estrela.innerHTML = '<path d="M8 0L9.8659 5.13165H15.3301L10.7321 8.36835L12.598 13.5L8 10.2633L3.40195 13.5L5.26795 8.36835L0.669922 5.13165H6.13406L8 0Z" fill="red"/>';
+    function criarEstrela(e) {
+        if (Math.random() > 0.21) { // Frequencia das estrelas
+            const estrela = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+            estrela.setAttribute('width', '40'); 
+            estrela.setAttribute('height', '40'); 
+            estrela.innerHTML = '<path d="M8 0L9.8659 5.13165H15.3301L10.7321 8.36835L12.598 13.5L8 10.2633L3.40195 13.5L5.26795 8.36835L0.669922 5.13165H6.13406L8 0Z" fill="red"/>';
 
-        estrela.style.position = 'absolute';
-        estrela.style.left = (e.pageX - 20) + 'px'; // Centraliza a estrela no cursor
-        estrela.style.top = (e.pageY - 20) + 'px'; // Centraliza a estrela no cursor
-        document.body.appendChild(estrela);
+            estrela.style.position = 'absolute';
+            estrela.style.left = (e.pageX - 20) + 'px';
+            estrela.style.top = (e.pageY - 20) + 'px'; 
+            document.body.appendChild(estrela);
 
-        setTimeout(function() {
-            estrela.remove();
-        }, 600); // Ajustar a duração que a estrela permanece na tela
+            setTimeout(function() {
+                estrela.remove();
+            }, 600); 
+        }
     }
-}
-
 
 
 // Event listener para o movimento do mouse
@@ -67,23 +72,21 @@ input.addEventListener('mouseleave', function() {
     document.addEventListener('mousemove', criarEstrela);
 });
 
-
-
  // Função para ocultar o conjunto-total2
- function ocultarConjuntoTotal2() {
-    const conjuntoTotal2 = document.getElementById("conjunto-total2");
-    conjuntoTotal2.style.display = "none";
-}
+    function ocultarConjuntoTotal2() {
+        const conjuntoTotal2 = document.getElementById("conjunto-total2");
+        conjuntoTotal2.style.display = "none";
+    }
 
 // Função para mostrar o conjunto-total2
-function mostrarConjuntoTotal2() {
-    const conjuntoTotal2 = document.getElementById("conjunto-total2");
-    conjuntoTotal2.style.display = "block";
+    function mostrarConjuntoTotal2() {
+        const conjuntoTotal2 = document.getElementById("conjunto-total2");
+        conjuntoTotal2.style.display = "block";
 
-    // Oculta o conjunto-total após mostrar o conjunto-total2
-    const conjuntoTotal = document.getElementById("conjunto-total");
-    conjuntoTotal.style.display = "none";
-}
+        // Oculta o conjunto-total após mostrar o conjunto-total2
+        const conjuntoTotal = document.getElementById("conjunto-total");
+        conjuntoTotal.style.display = "none";
+    }
 
 
 window.onload = ocultarConjuntoTotal2;

@@ -1,12 +1,12 @@
-document.getElementById('verificarBtn').addEventListener('click', function() {
+document.getElementById('verificarBtn').addEventListener('click', verificarResposta);
+
+function verificarResposta() {
     const respostaOriginal = document.getElementById('respostaInput').value;
     const resposta = respostaOriginal.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
     let feedback = '';
 
-    // Variações de perguntas
-    const regex = /pq ele n[aõ]o tem estomago (pra isso)?|porque ele n[aõ]o tem estomago (para isso)?/i;
+    const regex = /pq ele (n[aã]o|nao) tem estomago( para isso| pra isso)?|porque ele (n[aã]o|nao) tem estomago( para isso| pra isso)?/i;
 
-   
     if (regex.test(resposta)) {
         feedback = 'Parabéns, ta afiada! 😊';
     } else {
@@ -15,12 +15,18 @@ document.getElementById('verificarBtn').addEventListener('click', function() {
 
     document.getElementById('feedback').innerHTML = feedback;
     document.getElementById('proxBtn').style.display = 'block';
+}
+
+// Event listener para a tecla Enter
+document.getElementById('respostaInput').addEventListener('keydown', function(event) {
+    if (event.keyCode === 13) { // 13 é o código da tecla Enter
+        verificarResposta();
+    }
 });
 
 document.getElementById('proxBtn').addEventListener('click', function() {
-    // outras perguntas
+    // Proximas perguntas
 });
-
 
 
  function ocultarConjuntoTotal2() {
