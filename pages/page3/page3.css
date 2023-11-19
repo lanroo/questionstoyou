@@ -7,61 +7,42 @@ body, html {
     font-family: 'Poppins', sans-serif;
 }
 
-#container-page2 {
+input, p#feedback, verificarBtn {
+    display: none;
+}
+h1 {
+    color: white;
+    font-size: 2.8rem;
     text-align: center;
 }
-
-h1#pergunta-page2 {
-    padding-bottom: 47px;
-    font-size: 3em;
-    color: #67bfdf;
+.home-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: rgb(0 123 255 / 59%);
+    color: white; 
+    text-align: center;
+    text-decoration: none; 
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s; 
+    margin-left: 14rem;
+    border-radius: 26px;
 }
 
-p#feedback {
-    color: rgb(248, 248, 248);
-    margin-left: 126px;
-    font-size: 2rem;
+
+.home-button:hover {
+    background-color: #e0e7ef; 
+    color:black;
+    font-weight: bold;
+    ;
 }
 
-button#nextBtn2 {
+button#nextBtn {
     margin-left: 21rem;
     margin-top: 5rem;
     width: 296px;
-}
-
-input {
-    padding: 30px;
-    margin: 10px;
-    border-radius: 30px;
-    width: 80%;
-    font-size: 1.5rem;
-    background: transparent;
-    box-shadow: 0 0 0 4px #3ea9d1 inset, 0 0 0 12px #f8f8f8 inset;
-    animation: mudancaDeCorBorda 5s linear infinite;
-}
-
-input#respostaInput {
-    color: white;
-}
-button {
-    cursor: pointer;
-    background-color: #3ea9d1;
-    font-family: 'Poppins', sans-serif;
-    color: rgb(7, 7, 7);
-    border: none;
-    padding: 15px;
-    margin: 10px;
-    border-radius: 30px;
-    font-size: 2rem;
-    width: 25%;
-}
-
-button:hover {
-    background-color: rgb(21, 77, 173); 
-    transform: scale(1.1); 
-    transition: background-color 0.3s, transform 0.2s; 
-    color:white;
-    font-family: 'Poppins', sans-serif;
 }
 
 footer {
@@ -75,9 +56,17 @@ footer {
     padding: 10px;
 }
 
-
-
-
+.video-background video {
+    width: 131%;
+    height: auto;
+    position: absolute;
+    top: 39%;
+    left: 41%;
+    transform: translate(-43%, -36%);
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}
 
 @keyframes mudancaDeCorBorda {
     0%, 80% {
@@ -88,7 +77,20 @@ footer {
     }
 }
 
-@media (max-width: 600px) {
+    @media (max-width: 600px) {
+        .video-background video {
+            width: 100%;   
+            height: auto; 
+            position: absolute;
+            top: 50%;    
+            left: 50%;   
+            transform: translate(-50%, -50%); 
+            min-width: 411%;
+            min-height: 100%;
+            z-index: -1;
+        }
+    }
+
     
     h3 {
         font-size: xxx-large;
@@ -107,41 +109,29 @@ footer {
      
     }
 
-}
 
-body {
-    background: #000;
-    overflow: hidden;
-}
-
-.video-background {
-    position: 100%;
-    overflow: hidden;
-}
-
-.video-background video {
-    width: 100%;
-    height: auto;
-    position: absolute;
-    top: 39%;
-    left: 41%;
-    transform: translate(-43%, -36%);
-    min-width: 100%;
-    min-height: 100%;
-    z-index: -1;
-}
-
-.content {
-    position: relative;
-    z-index: 2;
-    
-}
-
-@keyframes moverUniverso {
-    0% {
-        transform: translateY(0);
+    body {
+        background: #000;
+        overflow: hidden;
     }
-    100% {
-        transform: translateY(-100%);
+
+    .video-background {
+        position: 100%;
+        overflow: hidden;
     }
-}
+
+
+    .content {
+        position: relative;
+        z-index: 2;
+        
+    }
+
+    @keyframes moverUniverso {
+        0% {
+            transform: translateY(0);
+        }
+        100% {
+            transform: translateY(-100%);
+        }
+    }
